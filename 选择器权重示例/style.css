@@ -1,0 +1,29 @@
+#content div#main-content h2 {
+    color: red;
+}
+/* 此时优先级权值为：100(#content) + 1(div) + 100(#main-content) + 1(h2) = 202 */
+
+#content #main-content>h2 {
+    color: blue;
+}
+/* 此时优先级权值为：100(#content) + 100(#main-content) + 1(h2) = 201 */
+
+body #content div[id="main-content"] h2 {
+    color: green;
+}
+/* 此时优先级权值为：1(body) + 100(#content) + 1(div) + 10([id="main-content"]) + 1(h2) = 113 */
+
+#main-content[class="paragraph"] h2 {
+    color: yellow;
+}
+/* 此时优先级权值为：100(#main-content) + 10([class="paragraph"]) + 1(h2) = 111 */
+
+#main-content div.paragraph h2 {
+    color: orange;
+}
+/* 此时优先级权值为：100(#main-content) + 1(div) + 10(.paragraph) + 1(h2) = 112 */
+
+div#main-content div.paragraph h2.first {
+    color: pink;
+}
+/* 此时优先级权值为：1(div) + 100(#main-content) + 1(div) + 10(.paragraph) + 1(h2) + 10(.first) = 123 */

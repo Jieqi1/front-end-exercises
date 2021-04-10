@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CSS 中选择器的权重</title>
+</head>
+<body>
+    <div id="content">
+        <div id="main-content">
+            <h2>CSS 中选择器的等级与权值</h2>
+            <p>第一等：内联样式表。如：style="xxx"，权值为1000</p>
+            <p>第二等：id 选择器。如：#content，权值为 100</p>
+            <p>第三等：类和伪类选择器。如：.content，:hover，[attrbute]，权值为10</p>
+            <p>第四等：元素和伪元素选择器。如：p，::first-line，权值为1</p>
+            <p>注意：通用选择器（*），子选择器（>）和相邻选择器（+）并不在这四个等级中，所以它们的权值都为 0</p>
+            <div id="paragraph">
+                <h2 class="first">优先级的比较与样式的显示</h2>
+                <p>比较优先级时需要将所有选择器的权值相加比较，最后优先级越越优先显示。优先级一样时，优先显示靠下的样式。</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
