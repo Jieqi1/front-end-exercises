@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=q, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>同时解决外边距重叠与高度塌陷问题</title>
+</head>
+<body>
+    <h2>同时解决外边距重叠和高度塌陷问题的方法：</h2>
+    <p>在收到影响的元素里添加 clearfix 类，然后在样式表中添加如下代码：</p>
+    <p>.clearfix::before, .clearfix::after {</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;content: '';</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;display: table;</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;clear: both;</p>
+    <p>}</p>
+    
+    <div class="box1 clearfix">
+        <div class="box2"></div>
+    </div>
+    <div class="box3 clearfix"></div>
+</body>
+</html>
