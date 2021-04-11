@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="clear.css">
+    <title>通过 clear 属性来解决高度塌陷带来的影响</title>
+</head>
+<body>
+   <p>clear 属性的作用：清除浮动元素对当前元素产生的影响。</p> 
+   <h2>可选值：</h2>
+   <ul>
+       <li>left：清除左侧浮动元素对当前元素产生的影响。</li>
+       <li>right：清除右侧浮动元素对当前元素产生的影响。</li>
+       <li>both：清除两侧浮动元素中对当前元素产生最大影响的那侧。</li>
+   </ul>
+   <h2>原理：</h2>
+   <p>设置 clear 属性后，浏览器会自动为当前元素添加一个 margin-top（但在审查元素中是看不见的），以使其<b>位置</b>不受其他元素的影响。但它并不能解决高度塌陷。</p>
+
+   <div class="box1">
+       <div class="box2"></div>
+   </div>
+   <div class="box3"></div>
+</body>
+</html>

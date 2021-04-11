@@ -1,0 +1,17 @@
+.box1 {
+    border: 1px red solid;
+    background-color: #bfa;
+}
+
+.box2 {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    float: left;
+}
+
+.box3 {
+    width: 150px;
+    height: 150px;
+    background-color: pink;
+}

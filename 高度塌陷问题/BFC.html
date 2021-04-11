@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="BFC.css">
+    <title>BFC 解决高度塌陷问题</title>
+</head>
+<body>
+    <h2>什么是 BFC？</h2>
+    <p>BFC(Block Formatting Context)块级格式化环境：BFC 是 CSS 中的一个隐含属性，可以为一个元素开启 BFC。开启 BFC 的元素会变成一个独立的布局区域。</p>
+    <h2>开启 BFC 后的特点：</h2>
+    <ul>
+        <li>开启 BFC 的元素不会被浮动元素覆盖。</li>
+        <li>开启 BFC 的元素不会发生相邻父子元素间上外边距重叠问题。</li>
+        <li>开启 BFC 的元素可以包含浮动的子元素</li>
+    </ul>
+    <h2>开启 BFC 的方法：</h2>
+    <ul>
+        <li>将元素设置为浮动元素，不推荐。</li>
+        <li>将元素设置为行内块元素，不推荐。</li>
+        <li>常用的方法：将元素的 overflow 属性值设置为一个非 visible 的值，通常为 hidden。</li>
+    </ul>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+    <div class="box3"></div>
+</body>
+</html>
