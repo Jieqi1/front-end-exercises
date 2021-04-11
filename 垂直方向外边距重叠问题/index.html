@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>外边距重叠问题解决示例</title>
+</head>
+<body>
+    <p>父子元素间，相邻上外边距，子元素的值会传递给父元素。</p>
+    <h2>问题示例</h2>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+
+    <h2>利用 before 伪元素解决外边距重叠问题</h2>
+    <div class="box3">
+        <div class="box4"></div>
+    </div>
+</body>
+</html>
